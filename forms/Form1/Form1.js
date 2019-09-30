@@ -20,19 +20,42 @@ a branch named 'home loan' for when you are creating, testing, getting the home 
 GitHub keeps a history, so I can see the timeline of these activities in your GitHub.com repository.
 copy the GitHub.com url (under the Download/Clone button) and put it on a Word doc with your name. 
 */
-
+/*
 let intialQuestion = prompt('Which calculator would you like to use: Home Loan Payment or Car Loan Payment?')
-if 
+if (initalQuestion.toLowerCase= 'home loan payment') {
+  let amount = prompt('How much will the house cost?')
+  let timeFrame = prompt('How many years will you be paying on the house?')
+  let interest = prompt('What will your interest rate be on the house?')
+} else if (initalQuestion.toLowerCase= 'car loan payment'){
+  let amount = prompt('How much will the house cost?')
+  let timeFrame = prompt('How many years will you be paying on the house?')
+  let interest = prompt('What will your interest rate be on the house?')
+} else {
+  prompt('Sorry that is not an option: please choose again or say STOP')
+}
+  
 Ask loan questions?
 Answers back in format
+*/
+
+let a = Number(prompt('Principal'))
+let b = Number(prompt('Length'))
+let c = Number(prompt('rate'))
+console.log(Math.pow((1+(c/1200)),b))
+
 
 function carLoanPayment(a,b,c) {
   let principal = a
-  let length = b*12
-  let rate = c/100
-  
+  let length = b
+  let rate = c/1200
+  let rate1 = Math.pow((1+rate),length)
+  let payment= principal*rate*rate1 /(rate1 - 1)
+  return payment
   
 }
+alert(carLoanPayment(a,b,c))
+/*
 function homeLoanPayment{
   
 }
+*/
